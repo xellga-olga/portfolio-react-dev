@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 2px;
+}
+
+body {
+    background: black;
+    /* 3D Cube Face Colors */
+    --hue-1-transparent: rgba(255, 0, 0, 0.6);
+    --hue-2-transparent: rgba(0, 255, 0, 0.6);
+    --hue-3-transparent: rgba(0, 0, 255, 0.6);
+    --hue-4-transparent: rgba(255, 255, 0, 0.6);
+    --hue-5-transparent: rgba(0, 255, 255, 0.6);
+    --hue-6-transparent: rgba(255, 0, 255, 0.6);
+
+    border-top: 1px solid #676767;
+    border-left: 1px solid #676767;
+    border-right: 1px solid #676767;
+    border-bottom: 1px solid #676767;
+
+    margin: 30px;
+    border-radius: 10px;
+}
