@@ -5,6 +5,8 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import CubeBackground from "./components/CubeBackground/CubeBackground";
+import InfoContact from "./components/InfoContact";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -12,8 +14,10 @@ function App() {
       <CubeBackground />
       <div className='relative z-10'>
         <Navbar/>
-        <Routes>2
+        <InfoContact />
+        <Routes>
           <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
           <Route path="/skills" element={<Skills/>}/>
           <Route path="/projects" element={<Projects/>}/>
           <Route path="/contact" element={<Contact/>}/>

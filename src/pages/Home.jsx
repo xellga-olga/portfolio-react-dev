@@ -3,6 +3,7 @@ import image from '../assets/img.jpeg'
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import About from "./About";
 
 
 const Home = () => {
@@ -21,11 +22,12 @@ const Home = () => {
           <h2 className="text-xl md:text-2xl font-medium">Hi! I’m Olya Pla 👋</h2>
 
           <h1 className="text-3xl md:text-5xl leading-tight">
-            junior frontend React developer <br /> based in Hungary.
+            junior frontend React developer <br/> based in Hungary.
           </h1>
 
           <p className="text-gray-400 text-sm md:text-base">
-            I'm a passionate junior frontend developer with a focus on React. I’m currently based in Hungary and constantly learning to build modern, responsive web applications.
+            I'm a passionate junior frontend developer with a focus on React. I’m currently based in Hungary and
+            constantly learning to build modern, responsive web applications.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
@@ -40,18 +42,12 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='mt-8 pt-6 border-t border-t-[#676767] text-white'>
-        <h1 className='text-4xl font-bold mb-5 text-center'>About Me</h1>
-        <p className="text-gray-300 leading-8 text-center">
-          I'm a passionate and motivated Junior React Developer with a strong foundation in modern front-end
-          technologies.
-          <br/>
-          I enjoy building clean, responsive, and user-friendly interfaces using React, Tailwind CSS, and JavaScript.
-          <br/>
-          I’m constantly learning and striving to improve my skills by working on personal projects and exploring new
-          tools in the ecosystem.
-        </p>
+
+      <div className='mt-8 pt-6 border-t border-t-[#676767]'>
+        <About/>
       </div>
+
+
       <div className='mt-8 pt-6 border-t border-t-[#676767]'>
         <Skills/>
       </div>

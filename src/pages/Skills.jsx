@@ -10,7 +10,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 
 const skillSet = [
   { icon: <FaReact className="text-blue-400 text-5xl" />, label: "React", bottomInfo: "react-router" },
-  { icon: <GrJs className="text-yellow-400 text-5xl" />, label: "JS" },
+  { icon: <GrJs className="text-yellow-400 text-5xl" />, label: "JS", bottomInfo: "react-router" },
   { icon: <FaGitAlt className="text-orange-500 text-5xl" />, label: "Git" },
   { icon: <MdHtml className="text-red-500 text-5xl" />, label: "HTML" },
   { icon: <MdCss className="text-blue-500 text-5xl" />, label: "CSS" },
