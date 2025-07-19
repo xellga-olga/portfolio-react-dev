@@ -7,7 +7,7 @@ import { LuMapPinHouse } from "react-icons/lu";
 
 const InfoContact = () => {
   return (
-    <div className="bg-black text-gray-200 font-thin px-4 py-8 border-b border-b-[#676767] border-t border-t-[#676767] w-3/4 mx-auto">
+    <div className="bg-black text-gray-200 font-thin px-4 py-8 border-t border-t-[#676767]  mx-auto">
       <div className="flex flex-col items-center  sm:flex-row justify-center sm:items-center gap-6 flex-wrap md:items-center md:justify-center ">
         <div className="flex items-center gap-1">
           <IoIosMail className="text-xl" />

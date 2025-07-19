@@ -55,7 +55,7 @@ const Projects = () => {
                      className="snap-center min-w-[280px] sm:min-w-[350px] h-44 bg-gray-800 rounded-xl p-4 shadow-md"
                      initial={{ opacity: 0, y: 20 }}
                      whileInView={{ opacity: 1, y: 0 }}
-                     transition={{ duration: 0.4, delay: index * 0.1 }}
+                     transition={{ duration: 0.4, delay: index * 0.2 }}
                      viewport={{ once: true }}
           >
             <h5 className="text-lg text-center mb-2 font-bold text-gray-200">{item.name}</h5>

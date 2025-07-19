@@ -14,13 +14,15 @@ function App() {
       <CubeBackground />
       <div className='relative z-10'>
         <Navbar/>
+      <div className='sticky top-0 z-50'>
         <InfoContact />
+      </div>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
+          <Route path="/about_me" element={<About/>}/>
           <Route path="/skills" element={<Skills/>}/>
           <Route path="/projects" element={<Projects/>}/>
-          <Route path="/contact" element={<Contact/>}/>
+          {/*<Route path="/contact" element={<Contact/>}/>*/}
         </Routes>
       </div>
     </div>
