@@ -14,7 +14,7 @@ import facebookImage from '../assets/facebook.svg'
 
 const About = () => {
   return (
-    <motion.div className='text-white py-10 px-4 bg-black md:px-10'
+    <motion.div className='text-white py-10 px-4  md:px-10'
                 initial={{opacity: 0, y: 20}}
                 whileInView={{opacity: 1, y: 0}}
                 transition={{duration: 0.4, delay: 0.2}}
@@ -66,29 +66,14 @@ const About = () => {
             </div>
           </div>
 
-          <div className='mt-5'>
-            <p className='text-xl text-gray-300 mb-2 uppercase tracking-wider text-center md:text-left'>Qualities</p>
-            <div className='flex flex-wrap gap-3 justify-center md:justify-start'>
-              <span className='bg-gray-800 text-gray-200 text-lg px-3 py-1 rounded-full border border-gray-600'>
-                Fast Learner
-              </span>
-              <span className='bg-gray-800 text-gray-200 text-lg px-3 py-1 rounded-full border border-gray-600'>
-                Adaptable
-              </span>
-              <span className='bg-gray-800 text-gray-200 text-lg px-3 py-1 rounded-full border border-gray-600'>
-                Communicative
-              </span>
-            </div>
-          </div>
-
-
           <div className='flex gap-3 md:gap-10 flex-col md:flex-row items-center'>
+            {/*Tools i use*/}
             <div className='mt-5 flex flex-col items-center md:items-start'>
               <p className='text-[20px] text-gray-300 tracking-wider'>Tools i use</p>
               <motion.div className="flex flex-wrap gap-3 mt-3"
                           initial={{opacity: 0, y: 20}}
                           whileInView={{opacity: 1, y: 0}}
-                          transition={{duration: 0.4, delay: 0.8}}
+                          transition={{duration: 0.4, delay: 0.6}}
                           viewport={{once: true}}
               >
                 <div className='border rounded border-gray-500 p-3'>
@@ -103,6 +88,7 @@ const About = () => {
               </motion.div>
             </div>
 
+            {/*My social networks*/}
             <div className='mt-5 flex flex-col items-center md:items-start'>
               <p className='text-[20px] text-gray-300 tracking-wider'>My social networks</p>
               <motion.div className="flex flex-wrap gap-3 mt-3"
@@ -112,21 +98,97 @@ const About = () => {
                           viewport={{once: true}}
               >
                 <a href="https://www.instagram.com/olya__pla/" target="_blank" rel="noopener noreferrer">
-                  <div className='border rounded border-gray-500 p-3 hover:border-pink-500 hover:scale-105 transition duration-300 ease-in-out'>
+                  <div
+                    className='border rounded border-gray-500 p-3 hover:border-pink-500 hover:scale-105 transition duration-300 ease-in-out'>
                     <img src={instagramImage} width={30} height={30} alt="Instagram"/>
                   </div>
                 </a>
                 <a href="https://www.facebook.com/O1ina/" target="_blank" rel="noopener noreferrer">
-                  <div className='border rounded border-gray-500 p-3 hover:border-blue-500 hover:scale-105 transition duration-300 ease-in-out'>
+                  <div
+                    className='border rounded border-gray-500 p-3 hover:border-blue-500 hover:scale-105 transition duration-300 ease-in-out'>
                     <img src={facebookImage} width={30} height={30} alt="Facebook"/>
                   </div>
                 </a>
               </motion.div>
             </div>
           </div>
-
-
         </motion.div>
+      </div>
+
+      <div className='mt-10 flex flex-col md:flex-row gap-2 md:gap-4 items-center'>
+
+        {/* Qualities */}
+        <div className='w-full md:w-1/2'>
+          <p className='text-xl text-gray-300 mb-4 uppercase tracking-wider'>Qualities</p>
+          <div className='flex flex-wrap gap-3'>
+            <span className='bg-gray-800 text-gray-200 text-lg px-4 py-2 rounded-full border border-gray-600'>
+              Fast Learner
+            </span>
+            <span className='bg-gray-800 text-gray-200 text-lg px-4 py-2 rounded-full border border-gray-600'>
+              Adaptable
+            </span>
+            <span className='bg-gray-800 text-gray-200 text-lg px-4 py-2 rounded-full border border-gray-600'>
+              Communicative
+            </span>
+          </div>
+        </div>
+
+        {/* Languages */}
+        <div className='w-full md:w-1/2'>
+          <p className='text-xl text-gray-300 mb-4 uppercase tracking-wider'>Languages</p>
+          <div className='flex flex-wrap gap-4'>
+            <motion.div
+              className="flex items-center p-2"
+              initial={{opacity: 0, y: 20}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 0.4, delay: 0.7}}
+              viewport={{once: true}}
+            >
+              <div
+                className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-cyan-500 text-white text-[12px] font-semibold ">
+                100%
+              </div>
+              <div className="flex flex-col">
+                <p className="text-white text-lg font-medium">English</p>
+                <p className="text-gray-400 text-sm">B2-Upper Intermediate</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="flex items-center p-2 "
+              initial={{opacity: 0, y: 20}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 0.4, delay: 0.7}}
+              viewport={{once: true}}
+            >
+              <div
+                className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-cyan-500 text-white text-[12px] font-semibold ">
+                100%
+              </div>
+              <div className="flex flex-col">
+                <p className="text-white text-lg font-medium">Ukrainian</p>
+                <p className="text-gray-400 text-sm">Native</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="flex items-center p-2 "
+              initial={{opacity: 0, y: 20}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 0.4, delay: 0.7}}
+              viewport={{once: true}}
+            >
+              <div
+                className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-cyan-500 text-white text-[12px] font-semibold ">
+                100%
+              </div>
+              <div className="flex flex-col">
+                <p className="text-white text-lg font-medium">Russian</p>
+                <p className="text-gray-400 text-sm">Native</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
 
       </div>
     </motion.div>

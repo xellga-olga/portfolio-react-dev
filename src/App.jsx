@@ -1,12 +1,13 @@
 import {Route, Routes} from "react-router-dom";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
-import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import CubeBackground from "./components/CubeBackground/CubeBackground";
 import InfoContact from "./components/InfoContact";
 import About from "./pages/About";
+import MiniAppsPage from "./pages/MiniAppsPage";
+import QuoteGenerator from "./mini-apps/ QuoteGenerator";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
           <Route path="/about_me" element={<About/>}/>
           <Route path="/skills" element={<Skills/>}/>
           <Route path="/projects" element={<Projects/>}/>
-          {/*<Route path="/contact" element={<Contact/>}/>*/}
+          <Route path="/mini-apps" element={<MiniAppsPage />} />
+          <Route path="/mini-apps/quote" element={<QuoteGenerator />} />
         </Routes>
       </div>
     </div>

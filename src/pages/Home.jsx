@@ -5,6 +5,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import About from "./About";
 import {motion} from "framer-motion";
+import MiniAppsPage from "./MiniAppsPage";
 
 
 const Home = () => {
@@ -60,9 +61,9 @@ const Home = () => {
       <div className='mt-8 pt-6 border-t border-t-[#676767]'>
         <Projects/>
       </div>
-      {/*<div className='mt-8 pt-6 border-t border-t-[#676767]'>*/}
-      {/*  <Contact/>*/}
-      {/*</div>*/}
+      <div className='mt-8 pt-6 border-t border-t-[#676767]'>
+        <MiniAppsPage />
+      </div>
     </motion.div>
   );
 };

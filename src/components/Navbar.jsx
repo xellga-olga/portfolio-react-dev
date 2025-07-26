@@ -9,7 +9,7 @@ const Navbar = () => {
         <li><Link to="/about_me" className="hover:text-pink-400 transition">About me</Link></li>
         <li><Link to="/skills" className="hover:text-pink-400 transition">Skills</Link></li>
         <li><Link to="/projects" className="hover:text-pink-400 transition">Projects</Link></li>
-        {/*<li><Link to="/contact" className="hover:text-pink-400 transition">Contact</Link></li>*/}
+        <li><Link to="/mini-apps" className="hover:text-pink-400 transition">Mini Apps</Link></li>
       </ul>
     </nav>
   );
