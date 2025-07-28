@@ -8,6 +8,7 @@ import InfoContact from "./components/InfoContact";
 import About from "./pages/About";
 import MiniAppsPage from "./pages/MiniAppsPage";
 import QuoteGenerator from "./mini-apps/ QuoteGenerator";
+import TicTacToe from "./mini-apps/Tic-Tac-Toe";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/projects" element={<Projects/>}/>
           <Route path="/mini-apps" element={<MiniAppsPage />} />
           <Route path="/mini-apps/quote" element={<QuoteGenerator />} />
+          <Route path='/mini-apps/tictactoe' element={<TicTacToe />} />
         </Routes>
       </div>
     </div>
