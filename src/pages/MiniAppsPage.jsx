@@ -6,6 +6,9 @@ import { IoGameController } from "react-icons/io5";
 import { IoChatbubbleOutline } from "react-icons/io5";
 import React from "react";
 import { GiTicTacToe } from "react-icons/gi";
+import quizImg from "../assets/mini-apps-images/quizImg.jpg";
+import { MdOutlineQuiz } from "react-icons/md";
+
 
 
 
@@ -67,7 +70,7 @@ export default function MiniAppsPage() {
           <div className="relative z-10 p-2 flex flex-col h-full justify-between text-white">
             <div className="text-lg text-center mb-2 font-bold text-gray-100 flex items-center justify-center ">
               <span>Tic Tac Toe Game</span>
-              <GiTicTacToe  className="text-2xl"/>
+              <GiTicTacToe className="text-2xl"/>
             </div>
             <p className="text-sm mb-2 text-gray-200 text-center">
               Play the timeless game of Tic Tac Toe
@@ -83,15 +86,16 @@ export default function MiniAppsPage() {
           </div>
         </motion.div>
 
+
         <motion.div
-          key="quote"
+          key="quizapp"
           initial={{opacity: 0, y: 20}}
           whileInView={{opacity: 1, y: 0}}
           transition={{duration: 0.4}}
           viewport={{once: true}}
           className="relative group rounded-xl p-5 shadow-lg overflow-hidden transition-transform transform hover:scale-[1.02] hover:shadow-xl duration-300 hover:ring-2 hover:ring-cyan-400"
           style={{
-            backgroundImage: `url(${quoteImg})`,
+            backgroundImage: `url(${quizImg})`,
             backgroundSize: "cover",
             backgroundPosition: "center"
           }}
@@ -99,15 +103,15 @@ export default function MiniAppsPage() {
           <div className="absolute inset-0 bg-black bg-opacity-70 rounded-xl pointer-events-none z-0"></div>
           <div className="relative z-10 p-2 flex flex-col h-full justify-between text-white">
             <div className="text-lg text-center mb-2 font-bold text-gray-100 flex items-center justify-center ">
-              <span>Quote Generator</span>
-              <GiTicTacToe className="text-2xl"/>
+              <span>Quiz App</span>
+              <MdOutlineQuiz className="text-2xl"/>
             </div>
             <p className="text-sm mb-2 text-gray-200 text-center">
-              Random Quotes and Anecdotes to inspire or entertain.
+              Quiz App
             </p>
             <div className="flex justify-center gap-3 mt-2">
               <Link
-                to="/mini-apps/quote"
+                to="/mini-apps/quizapp"
                 className="text-sm border border-cyan-400 text-cyan-300 px-3 py-1.5 rounded hover:bg-cyan-500 hover:text-black transition"
               >
                 Play
