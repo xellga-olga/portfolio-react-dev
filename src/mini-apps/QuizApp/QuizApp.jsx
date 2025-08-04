@@ -32,9 +32,10 @@ function QuizApp() {
   }
 
   return (
-    <div
-      className="max-w-xl mx-auto mt-10 p-8 mb-7 bg-white  flex content-center flex-col items-center rounded-3xl text-center ">
-      <h2 className="text-2xl font-bold mb-4 text-black/70">Quiz App</h2>
+    <>
+    <h2 className="text-2xl font-bold mb-4 text-center text-white">Quiz App</h2>
+  <div
+    className="max-w-xl mx-auto mt-10 p-8 mb-7 bg-white  flex content-center flex-col items-center rounded-3xl text-center ">
       {showWelcome && <Welcome onStart={startTest} />}
 
       {!showWelcome && !showResult && (
@@ -47,6 +48,7 @@ function QuizApp() {
 
       {showResult && <Result answers={answers} restartTest={restartTest} />}
     </div>
+    </>
   );
 }
 
