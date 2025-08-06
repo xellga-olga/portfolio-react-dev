@@ -22,6 +22,31 @@ function Result({answers, restartTest}) {
         Your score is {score} out of {questions.length}
       </p>
 
+      {
+        mistakes.length > 0 && (
+          <div className='mt-4 text-left'>
+            <h3 className='mb-3 text-xl font-semibold text-red-600'>
+              Question you missed:
+            </h3>
+
+            <ul className='space-y-3'>
+              {
+                mistakes.map((option, index) => (
+                  <li className='p-4 bg-red-50 rounded-lg' key={index}>
+                    <p className='text-gray-800 font-bold' >
+                      {option.question}
+                    </p>
+                    <p className='mt-1 text-green-600 font-bold'>
+                      Correct answer: {option.correctAnswer}
+                    </p>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        )
+      }
+
       <button
         onClick={restartTest}
         className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-700 transition duration-200"
