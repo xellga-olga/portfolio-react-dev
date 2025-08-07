@@ -24,7 +24,7 @@ function Result({answers, restartTest}) {
 
       {
         mistakes.length > 0 && (
-          <div className='mt-4 text-left'>
+           <div className='mt-4 text-left w-full max-w-2xl mx-auto px-4 sm:px-6'>
             <h3 className='mb-3 text-xl font-semibold text-red-600'>
               Question you missed:
             </h3>

@@ -21,7 +21,7 @@ const Skills = () => {
   return (
     <div
       className="text-white py-10 px-4 mb-5">
-      <h1 className="text-4xl font-bold mb-5 text-center">Skills</h1>
+      <h1 className="text-2xl sm:text-4xl font-bold mb-5 text-center">Skills</h1>
       <div className="flex flex-wrap justify-center gap-6 overflow-visible">
         {skillSet.map((skill, index) => (
           <motion.div

@@ -35,7 +35,8 @@ function QuizApp() {
     <>
     <h2 className="text-2xl font-bold mb-4 text-center text-white">Quiz App</h2>
   <div
-    className="max-w-xl mx-auto mt-10 p-8 mb-7 bg-white  flex content-center flex-col items-center rounded-3xl text-center ">
+    className="w-full max-w-xl mx-auto mt-10 p-6 sm:p-8 mb-7 bg-white flex flex-col items-center rounded-3xl text-center shadow-md"
+  >
       {showWelcome && <Welcome onStart={startTest} />}
 
       {!showWelcome && !showResult && (

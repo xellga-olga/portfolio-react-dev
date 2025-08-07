@@ -20,7 +20,7 @@ const About = () => {
                 transition={{duration: 0.4, delay: 0.2}}
                 viewport={{once: true}}
     >
-      <h1 className='text-4xl font-bold mb-5 text-center xl:text-xl'>About me</h1>
+      <h1 className='text-2xl sm:text-4xl font-bold mb-5 text-center'>About me</h1>
       <div className='flex flex-col md:flex-row md:justify-center gap-8 md:gap-12'>
         <img src={image} alt='image' className='w-full max-w-[400px] h-auto rounded-3xl object-cover'/>
 
