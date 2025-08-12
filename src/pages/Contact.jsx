@@ -5,7 +5,7 @@ import { SiGithub } from "react-icons/si";
 
 const Contact = () => {
   return (
-    <div className='text-white py-10 px-4"'>
+    <div className='text-white py-6 px-3 sm:py-10 sm:px-4"'>
       <h1 className="text-4xl font-bold mb-5 text-center">Contact</h1>
       <p className="text-center text-gray-300 leading-8 ">Open to junior roles and freelance projects — especially
         anything involving React.<br/>

@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import image from '../assets/img.jpeg'
 import Skills from "./Skills";
 import Projects from "./Projects";
-import Contact from "./Contact";
 import About from "./About";
 import {motion} from "framer-motion";
 import MiniAppsPage from "./MiniAppsPage";
+import { FaPhoneAlt } from "react-icons/fa";
+
 
 
 const Home = () => {
+  const [showPhone, setShowPhone] = useState(false);
   return (
     <motion.div
       initial={{opacity: 0, y: 20}}
@@ -39,6 +41,7 @@ const Home = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <button
+              onClick={() => setShowPhone(prev => !prev)}
               className="bg-white text-black px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform">
               connect with me
             </button>
@@ -47,10 +50,23 @@ const Home = () => {
               my resume
             </button>
           </div>
+          {showPhone && (
+            <div className="bg-gray-900 text-white px-6 py-4 rounded-xl mt-3 text-sm sm:text-base shadow-lg flex items-center gap-3">
+              <div className="bg-pink-500 p-2 rounded-full text-white">
+                <FaPhoneAlt />
+              </div>
+              <div>
+                <p className="font-semibold">Phone:</p>
+                <a href="tel:+380509077560" className="underline hover:text-pink-400 transition-colors duration-200">
+                  +380509077560
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
-      <div className='mt-8 pt-6 border-t border-t-[#676767]'>
+      <div className='mt-8 pt-6 border-t border-t-[#676767] bg-black'>
         <About/>
       </div>
 

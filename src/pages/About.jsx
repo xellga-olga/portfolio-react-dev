@@ -1,198 +1,98 @@
-import React from 'react';
-import image from '../assets/aboutImg.jpg';
-import { SiWebstorm } from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
-import { IoLogoFigma } from "react-icons/io5";
-import { motion } from 'framer-motion';
-import languagesImage from '../assets/languagesImage.svg'
-import educationImage from '../assets/educationImage.svg'
-import projectsImage from '../assets/projectsImage.svg'
-
-import instagramImage from '../assets/instagram.svg'
-import facebookImage from '../assets/facebook.svg'
+import React, {useState} from 'react';
+import img1 from '../assets/aboutImg.jpg';
+import img2 from '../assets/aboutImg2.jpg';
+import img3 from '../assets/aboutImg3.jpg';
+import img4 from '../assets/aboutImg4.jpg';
 
 
 const About = () => {
+  const images = [img1, img2, img3, img4];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
   return (
-    <motion.div className='text-white py-10 px-4  md:px-10'
-                initial={{opacity: 0, y: 20}}
-                whileInView={{opacity: 1, y: 0}}
-                transition={{duration: 0.4, delay: 0.2}}
-                viewport={{once: true}}
-    >
-      <h1 className='text-2xl sm:text-4xl font-bold mb-5 text-center'>About me</h1>
-      <div className='flex flex-col md:flex-row md:justify-center gap-8 md:gap-12'>
-        <img src={image} alt='image' className='w-full max-w-[400px] h-auto rounded-3xl object-cover'/>
+    <div className='text-white py-6 px-3 sm:py-10 sm:px-4'>
+      <h1 className="text-4xl font-bold mb-5 text-center">About Me</h1>
+      <div className="bg-black flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 p-6">
+        {/* slider */}
+        <div className="relative w-full max-w-[350px] h-64 sm:h-96">
+          <img
+            src={images[currentIndex]}
+            alt="About me"
+            className="w-full object-cover rounded-2xl h-full  "
+          />
+          {/* buttons */}
+          <button
+            onClick={prevSlide}
+            className="absolute top-1/2 left-0 rounded-full transform -translate-y-1/2 bg-gray-400/20 text-white px-3 py-2 text-lg sm:text-xl"
+          >
+            ❮
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute top-1/2 right-0 rounded-full transform -translate-y-1/2 bg-gray-400/20 text-white px-3 py-2 text-lg sm:text-xl"
+          >
+            ❯
+          </button>
+        </div>
 
-        <motion.div
-          initial={{opacity: 0, y: 20}}
-          whileInView={{opacity: 1, y: 0}}
-          transition={{duration: 0.4, delay: 0.5}}
-          viewport={{once: true}}>
-
-          <p
-            className="text-gray-300 text-[15px] md:text-[20px] leading-[32px] md:leading-[40px] w-full md:w-[797px] h-auto"> I’m
-            an aspiring Frontend Developer focused on building user interfaces with React.js.<br/>I’m learning
-            through
-            self-directed projects and constantly improving my skills.<br/>Looking to grow within a team and gain
-            experience
-            working on real-world tasks.
+        {/* Content */}
+        <div className="flex flex-col gap-4 sm:gap-6 max-w-[800px] text-gray-300">
+          <p className="text-base sm:text-[18px] leading-relaxed sm:leading-[32px]">
+            As a frontend developer specializing in React, I enjoy transforming ideas into interactive and visually
+            appealing interfaces. I approach each project with curiosity and precision, aiming to combine clean code with
+            thoughtful user experience. My goal is to grow as a developer while creating products that are both functional
+            and inspiring.
           </p>
 
-
-          <div className='flex gap-6 md:gap-10 flex-wrap justify-center md:justify-start mt-5'>
-            <div className='border border-gray-800 w-48 h-48 rounded-lg border-b-4 border-r-4 p-4'>
-              <img src={languagesImage} alt='languages' className='mb-2'/>
-              <p className='text-xl text-gray-300 mb-1'>Languages</p>
-              <p className='text-sm text-gray-400 '>
-                HTML, CSS, JavaScript, React.js
-              </p>
+          {/* INFO*/}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 text-sm md:text-base">
+            <div className="space-y-5 mt-3">
+              <p className='border-b border-b-gray-800'><span className="font-semibold text-white">Birthday:</span> 7
+                April 1997</p>
+              <p className='border-b border-b-gray-800'><span className="font-semibold text-white">Age:</span> 28</p>
+              <p className='border-b border-b-gray-800'><span className="font-semibold text-white">From:</span> Odesa,
+                Ukraine</p>
+              <p className='border-b border-b-gray-800'><span className="font-semibold text-white">Base:</span> Budapest,
+                Hungary</p>
             </div>
 
-            <div className='border border-gray-800 w-48 h-48 rounded-lg border-b-4 border-r-4 p-4'>
-              <img src={educationImage} alt='education' className='mb-2'/>
-              <p className='text-xl text-gray-300 mb-1'>Education</p>
-              <p className='text-sm text-gray-400 '>
-                Self-taught developer, learning through online courses and hands-on practice.
-              </p>
-            </div>
 
-            <div className='border border-gray-800 w-48 h-48 rounded-lg border-b-4 border-r-4 p-4'>
-              <img src={projectsImage} alt='projects' className='mb-2'/>
-              <p className='text-xl text-gray-300 mb-1'>Projects</p>
-              <p className='text-sm text-gray-400'>
-                Built several personal projects: landing pages, UI components, simple apps.
-              </p>
-            </div>
-          </div>
-
-          <div className='flex gap-3 md:gap-10 flex-col md:flex-row items-center'>
-            {/*Tools i use*/}
-            <div className='mt-5 flex flex-col items-center md:items-start'>
-              <p className='text-[20px] text-gray-300 tracking-wider'>Tools i use</p>
-              <motion.div className="flex flex-wrap gap-3 mt-3"
-                          initial={{opacity: 0, y: 20}}
-                          whileInView={{opacity: 1, y: 0}}
-                          transition={{duration: 0.4, delay: 0.6}}
-                          viewport={{once: true}}
-              >
-                <div className='border rounded border-gray-500 p-3'>
-                  <SiWebstorm className='text-[34px] text-[#00c7b7]'/>
-                </div>
-                <div className='border rounded border-gray-500 p-3'>
-                  <VscVscode className='text-[34px] text-[#007ACC]'/>
-                </div>
-                <div className='border rounded border-gray-500 p-3'>
-                  <IoLogoFigma className='text-[34px] text-[#A259FF]'/>
-                </div>
-              </motion.div>
-            </div>
-
-            {/*My social networks*/}
-            <div className='mt-5 flex flex-col items-center md:items-start'>
-              <p className='text-[20px] text-gray-300 tracking-wider'>My social networks</p>
-              <motion.div className="flex flex-wrap gap-3 mt-3"
-                          initial={{opacity: 0, y: 20}}
-                          whileInView={{opacity: 1, y: 0}}
-                          transition={{duration: 0.4, delay: 0.7}}
-                          viewport={{once: true}}
-              >
-                <a href="https://www.instagram.com/olya__pla/" target="_blank" rel="noopener noreferrer">
-                  <div
-                    className='border rounded border-gray-500 p-3 hover:border-pink-500 hover:scale-105 transition duration-300 ease-in-out'>
-                    <img src={instagramImage} width={30} height={30} alt="Instagram"/>
+            {/* Languages */}
+            <div className="space-y-5 ">
+              {[
+                {name: "English", level: 65},
+                {name: "Russian", level: 100},
+                {name: "Ukrainian", level: 100}
+              ].map((lang, index) => (
+                <div key={index}>
+                  <div className="flex justify-between mb-1">
+                    <span className="text-white font-semibold">{lang.name}</span>
+                    <span className="text-white">{lang.level}%</span>
                   </div>
-                </a>
-                <a href="https://www.facebook.com/O1ina/" target="_blank" rel="noopener noreferrer">
-                  <div
-                    className='border rounded border-gray-500 p-3 hover:border-blue-500 hover:scale-105 transition duration-300 ease-in-out'>
-                    <img src={facebookImage} width={30} height={30} alt="Facebook"/>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div
+                      className="bg-red-500 h-2 rounded-full"
+                      style={{width: `${lang.level}%`}}
+                    ></div>
                   </div>
-                </a>
-              </motion.div>
+                </div>
+              ))}
             </div>
-          </div>
-        </motion.div>
-      </div>
 
-      <div className='mt-10 flex flex-col md:flex-row gap-2 md:gap-4 items-center'>
-
-        {/* Qualities */}
-        <div className='w-full md:w-1/2'>
-          <p className='text-xl text-gray-300 mb-4 uppercase tracking-wider'>Qualities</p>
-          <div className='flex flex-wrap gap-3'>
-            <span className='bg-gray-800 text-gray-200 text-lg px-4 py-2 rounded-full border border-gray-600'>
-              Fast Learner
-            </span>
-            <span className='bg-gray-800 text-gray-200 text-lg px-4 py-2 rounded-full border border-gray-600'>
-              Adaptable
-            </span>
-            <span className='bg-gray-800 text-gray-200 text-lg px-4 py-2 rounded-full border border-gray-600'>
-              Communicative
-            </span>
           </div>
         </div>
-
-        {/* Languages */}
-        <div className='w-full md:w-1/2'>
-          <p className='text-xl text-gray-300 mb-4 uppercase tracking-wider'>Languages</p>
-          <div className='flex flex-wrap gap-4'>
-            <motion.div
-              className="flex items-center p-2"
-              initial={{opacity: 0, y: 20}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{duration: 0.4, delay: 0.7}}
-              viewport={{once: true}}
-            >
-              <div
-                className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-cyan-500 text-white text-[12px] font-semibold ">
-                100%
-              </div>
-              <div className="flex flex-col">
-                <p className="text-white text-lg font-medium">English</p>
-                <p className="text-gray-400 text-sm">B2-Upper Intermediate</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="flex items-center p-2 "
-              initial={{opacity: 0, y: 20}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{duration: 0.4, delay: 0.7}}
-              viewport={{once: true}}
-            >
-              <div
-                className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-cyan-500 text-white text-[12px] font-semibold ">
-                100%
-              </div>
-              <div className="flex flex-col">
-                <p className="text-white text-lg font-medium">Ukrainian</p>
-                <p className="text-gray-400 text-sm">Native</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="flex items-center p-2 "
-              initial={{opacity: 0, y: 20}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{duration: 0.4, delay: 0.7}}
-              viewport={{once: true}}
-            >
-              <div
-                className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-cyan-500 text-white text-[12px] font-semibold ">
-                100%
-              </div>
-              <div className="flex flex-col">
-                <p className="text-white text-lg font-medium">Russian</p>
-                <p className="text-gray-400 text-sm">Native</p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-
       </div>
-    </motion.div>
-  );
+
+    </div>
+  )
 };
 
 export default About;
