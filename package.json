@@ -8,7 +8,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@motionone/react": "^10.16.4",
     "framer-motion": "^12.23.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
